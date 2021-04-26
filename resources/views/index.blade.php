@@ -1,0 +1,20 @@
+@extends('layout.app')
+@section('title')
+Shaikram Abdulguro Jr
+@endsection
+@section('links')
+  @include('inc/links')
+@endsection
+@section('content')
+  @include('inc/mobilenav')
+  @include('inc/sidenav')
+  @include('inc/home')
+  @include('inc/profile')
+  @include('inc/skill')
+  @include('inc/work')
+  @include('inc/contact')
+  @include('inc/footer')
+@endsection
+@section('scripts')
+@include('inc/scripts')
+@endsection

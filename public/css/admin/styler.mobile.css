@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+body{
+  padding:0;
+  margin: 0;
+  background: #000;
+}
+.inbox-container{
+  background: #5e686a;
+  font-family:"Roboto",sans-serif;
+  border: 1px solid #2e3132;
+}
+.inbox-head{
+  background: #515759;
+  border-bottom: 1px solid #2e3132;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.span-notif{
+  height:100%;
+  font-size: 15px;
+}
+.d-time{
+  display:none;
+  font-size: 15px;
+  color:#545d60;
+}
+.m-time{
+  font-size: 15px;
+  color:#545d60;
+}
+.message-container{
+  background: #ffffff;
+  border-bottom:1px solid #b8b8b8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.y-message-container{
+  background: #ffffff;
+  border-bottom:1px solid #b8b8b8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.message-container:hover{
+  cursor: pointer;
+  background: #ebebeb;
+}
+.r-message-container:hover{
+  cursor: pointer;
+  background: #ebebeb;
+}
+.message-container h4{
+  font-weight: bold;
+  color:#4b5254;
+}
+.r-message-container{
+  background: #e6eff1;
+  border-bottom:1px solid #b8b8b8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.r-message-container h4{
+  color:#4b5254;
+}
+.z-message-container{
+  background: #e6e6e6;
+  border-bottom:1px solid #b8b8b8;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.z-message-container h4{
+  color:#004085;
+}
+.message-ul{
+  padding: 0;
+  margin: 0;
+}
+.message-ul li{
+  list-style: none;
+}
+.message-ul li a{
+  text-decoration: none;
+  color: #212325;
+}
+.y_div_msg{
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #e6e6e6;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+}
+.z_div_msg{
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 2px;
+}
+.div_msg{
+  padding-top: 10px;
+  height:40px;
+  overflow: hidden;
+}
+.div_send{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  height:auto;
+  background: #121313;
+}
+.form-textarea{
+  background: #2e3333;
+  color:#fefefe;
+  width:100%;
+  padding: 5px;
+}
+.col_send{
+
+}
+.p_msg{
+  font-size: 20px;
+  font-weight: bold;
+
+}
+.pre_wrap{
+  white-space: pre-wrap;
+}
+.r-p_msg{
+  font-size: 20px;
+}
+.reply_ul li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.reply_ul{
+  padding: 0;
+  margin: 0;
+}
+.portfolio-content{
+  
+}
+.col1{
+
+}
+.col2{
+
+}
