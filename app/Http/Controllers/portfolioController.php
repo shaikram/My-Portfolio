@@ -24,25 +24,19 @@ class portfolioController extends Controller
       return view('index', ['data' => $data, 'data1' => $data1, 'data2' => $data2]);
     }
     public function upload(Request $request){
-      $name = $request->port1;
-      echo "yey";
-      // $image = $request->file('file1');
-      // $new_name = rand().".".$image->getClientOriginalExtension();
-      // $image->move(public_path('work'), $new_name);
+      //Insert the data to Database
+      $portfolio = new Portfolio();
+      $portfolio->webName = $request->input("input1");
+      $portfolio->webURL = $request->input("input2");
+      $portfolio->systemKind = $request->input("input3");
+      $portfolio->projectType = $request->input("input4");
+      $portfolio->description = $request->input("input5");
 
+          if($portfolio->save()){
+            echo "Message sent";
+          }else{
+            echo "There's a problem";
+          }
 
-      // $rules = array(
-      //   'file1' => 'required|image|max:2048'
-      // );
-      //
-      // $error = Validator::make($request->all(), $rules);
-      //
-      // if($error->fails()){
-      //     return response()->json()(['errors' => $error->errors()->all()]);
-      // }
-      //
-      // $output = array('success' => 'Portfolio uploadded successfully');
-      //
-      // return response()->json($output);
     }
 }

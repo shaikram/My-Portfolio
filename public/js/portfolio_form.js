@@ -74,54 +74,35 @@ $(document).ready(function(){
 
     // alert('all goods');
     // =======After passing Validation send the data to server========/
-    $.ajax({
-      beforeSend:function(){
-        $('.progress-bar').css('width', '0%');
-      },
-      UploadProgress:function(event, position, total, percentageComplete){
+          $.ajax({
+            //target: '#targetLayer',
+                    beforeSubmit:function(){
+                      // $('.progress-bar').width('0%');
+                    },
+                    uploadProgress: function(event, position, total, percentageComplete){
+                        $('.progress-bar').animate({
+                         marginLeft: '100%'
+                        }, {
+                         duration: 5000
+                        });
+                        // $('.progress-bar').width(percentageComplete + '%');
+                    },
+                    success:function(data){
+                       //$('#loader-icon').hide();
+                       //$('#targetLayer').show();
+                       // $('.progress').hide();
+                       $('.progress-bar').animate({
+                        marginLeft: '0%'
+                       }, {
+                        duration: 1000
+                       });
+                       $('#portfolio_form').each(function(){
+                            this.reset();
+                        });
 
-        $('.progress-bar').text(percentageComplete + '%');
-        $('.progress-bar').animate({
-                    width: percentageComplete + '%'
-                   }, {
-                    duration: 2000
-                   });
-      },
-      url:"/upload-portfolio",
-      headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-      type:"post",
-      async:false,
-      data:{
-        "port1":port1
-      },
-      success:function(data){
-        $('.progress').hide();
-        alert(data + " Uploading Success");
-      }
-    });
-    // $('#portfolio_form').ajaxForm({
-    //   beforeSend:function(){
-    //     //code here before uploading picture
-    //   },
-    //   UploadProgress:function(event, position, total, percentComplete){
-    //     $('.progress-bar').text(percentComplete + '%');
-    //     $('.progress-bar').css('width', percentComplete + '%');
-    //   },
-    //   success:function(data){
-    //     if(data.errors){
-    //       $('.progress-bar').text('0%');
-    //       $('.progress-bar').css('width', '0%');
-    //       alert(data.errors+'<br/>');
-    //     }if(data.success){
-    //       $('.progress-bar').text('uploaded');
-    //       $('.progress-bar').css('width', '100%');
-    //       alert(data.success +'<br/>');
-    //       // $('#success').append(data.image); this is to show image
-    //     }
-    //
-    //   }
-    // });
-
+                    },
+                    resetForm: true
+           });
      //=================================================================================//
 
   });
