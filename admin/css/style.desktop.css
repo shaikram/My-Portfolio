@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+@media only screen and (min-width:1000px){
+
+  .nav_div ul li:nth-child(5):hover{border-right: 5px solid #000;}
+  .nav_div ul li:nth-child(6):hover{border-right: 5px solid #ab7d08;}
+  .nav_div ul li:last-child:hover{border-right: 5px solid #bacb36;}
+  .fa6{color: #ab7d08;}
+  .fa7{color: #bacb36;}
+  .side_nav{display: block;}
+  .msg_div{
+    width: 70%;
+    padding-left: 20%;
+    padding-right: 10%;
+  }
+  .msg_head span{
+    margin-left: -10%;
+  }
+  .nav_div ul a{
+    text-decoration: none;
+    font-family: arial;
+    font-size: 14px;
+    color: #000;
+  }
+  .unread_div{
+    border-left:1px solid #aeb3b9;
+    border-right:1px solid #aeb3b9;
+  }
+  .my_msg_div{
+    width:70%;
+    min-height: 500px;
+  }
+  .read_msg_div{
+    padding-left: 20%;
+    padding-right: 10%;
+    width:70%;
+  }
+  .port_form_div{
+    width:800px;
+    padding: 30px 2% 200px 10%;
+  }
+  .form_div_port{
+    width:100%;
+  }
+  /*==============SystemStyle=====================*/
+
+  .systemDiv{
+    width:750px;
+    padding-left: 5%;
+  }
+  .circleDiv{
+    padding-top: 1%;
+    margin-left: 55%;
+    margin-top: 35%;
+
+  }
+  .dlgBox{
+    width:500px;
+    height:500px;
+    margin: 50px 0 0 35%;
+  }
+}

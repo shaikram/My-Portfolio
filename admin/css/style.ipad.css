@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*==============end mobile navigation bar============*/
+@media only screen and (min-width:768px){
+  .msg_head span{
+    margin-left: -15%;
+  }
+  .my_msg_div{
+    min-height: 700px;
+  }
+  .form_div_port span{
+    margin-left: 8%;
+  }
+  .port_section{
+    margin-left: 8%;
+  }
+  .port_btn{
+    margin-left: 8%;
+  }
+  .othersdiv{
+    min-height: 1000px;
+  }
+  .circleDiv{
+    margin-left: 85%;
+    margin-top: 100%;
+    padding-top: 2%;
+
+  }
+}
