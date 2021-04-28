@@ -31,7 +31,7 @@ Route::get('/messages/{id}/edit', 'App\Http\Controllers\MessageController@update
 Route::get('/portfolio', 'App\Http\Controllers\MainController@portfolio');
 Route::resource('messages', 'App\Http\Controllers\MessageController');
 Route::get('/inboxdiv', 'App\Http\Controllers\MessageController@showInbox');
-Route::post('upload-portfolio', 'App\Http\Controllers\portfolioController@upload')->name('upload');
+Route::post('upload-portfolio', 'App\Http\Controllers\portfolioController@upload');
 Route::get('/boot', function () {
     return view('bootstrap');
 });

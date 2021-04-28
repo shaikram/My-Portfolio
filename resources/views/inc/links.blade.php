@@ -1,6 +1,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" crossorigin="anonymous">
 <link rel="icon" href={{ asset("web_image/web_logo.png") }} type="image/gif" sizes="16x16"/>
 <link rel="stylesheet" href={{ asset("css/style.mobile.css") }} type="text/css">
 <link rel="stylesheet" href={{ asset("css/style.ipad.css") }} type="text/css">

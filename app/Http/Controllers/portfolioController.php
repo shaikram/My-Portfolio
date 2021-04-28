@@ -31,11 +31,27 @@ class portfolioController extends Controller
       $portfolio->systemKind = $request->input("input3");
       $portfolio->projectType = $request->input("input4");
       $portfolio->description = $request->input("input5");
+      $photo = $request->file("cover");
+      $new_name = rand().'.'. $photo->getClientOriginalExtension();
+      $photo->move(public_path('work'), $new_name);
+      $portfolio->coverPhoto = $new_name;
+
+          for($i = 1; $i <= 4; $i++){
+            $name = $request->file('file'.$i);
+            $image = rand().'.'.$name->getClientOriginalExtension();
+            $name->move(public_path('work'), $image);
+            $tb_name = 'photo'.$i;
+            $portfolio->$tb_name = $image;
+          }
 
           if($portfolio->save()){
-            echo "Message sent";
+            return response()->json([
+              'message' => 'Success Uploading'
+            ]);
           }else{
-            echo "There's a problem";
+            return response()->json([
+              'message' => 'There is a problem'
+            ]);
           }
 
     }

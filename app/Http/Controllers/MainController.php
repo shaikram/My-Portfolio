@@ -12,6 +12,7 @@ use App\Extensions\MongoSessionHandler;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
 use DB;
+use App\Models\Portfolio;
 
 
 class MainController extends Controller
@@ -52,6 +53,10 @@ class MainController extends Controller
       return view('message');
     }
     public function portfolio(){
-      return view('portfolio');
+      $data = Portfolio::all();
+      $data1 = Portfolio::where('projectType', 'FUNCTIONAL')->get();
+      $data2 = Portfolio::where('projectType', 'PORTFOLIO')->get();
+
+      return view('portfolio', ['data' => $data, 'data1' => $data1, 'data2' => $data2]);
     }
 }

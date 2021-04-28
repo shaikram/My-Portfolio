@@ -50,37 +50,87 @@
 
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Cover Photo</label>
-          <input type="file" name="file1" class="form-control bg-dark text-light" id="port5" />
+          <input type="file" name="cover" class="form-control bg-dark text-light" id="port5" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 1</label>
-          <input type="file" name="file2" class="form-control bg-dark text-light" id="port6" />
+          <input type="file" name="file1" class="form-control bg-dark text-light" id="port6" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 2</label>
-          <input type="file" name="file3" class="form-control bg-dark text-light" id="port7" />
+          <input type="file" name="file2" class="form-control bg-dark text-light" id="port7" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 3</label>
-          <input type="file" name="file4" class="form-control bg-dark text-light" id="port8" />
+          <input type="file" name="file3" class="form-control bg-dark text-light" id="port8" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 4</label>
-          <input type="file" name="file5" class="form-control bg-dark text-light" id="port9" />
+          <input type="file" name="file4" class="form-control bg-dark text-light" id="port9" />
         </div><br><br>
 
       </div>
       <div class="col-sm-12 col-md-12 col-lg-12">
         <br>
-        <div class="progress" >
-          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 100%;margin-left:-100%;" aria-valuenow="" aria-valuemin="0" aria-valuemax="100"></div>
-        </div>
+
         <div class="d-grid gap-2 col-6 mx-auto"><br>
           <button class="btn btn-primary" type="submit">Upload</button>
         </div><br><br>
       </div>
       </form>
+    </div><br><br><br>
+    <div class="portfolio-div">
+      <div class="row">
+        <div class="work-head col-sm-12 col-md-12 col-lg-12 align-items-center text-center">
+          <h2>My Works</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="work-content col-sm-12 col-md-12 col-lg-12">
+                      {{-- <div class="myWorks_div" id="myWorks_div"> --}}
+
+                        <div id="wbg" class="wbg" onclick="dlgLogIn()"></div>
+                          <center>
+                             <div id="dlgbox" class="dlgbox">
+
+                             </div>
+                          </center>
+
+                        <div class="all_div work_ul_div" id="all_div">
+
+                          <ul>
+                            @foreach ($data as $rows)
+
+                                    <li id="work_img_li">
+                                      <div class="work_img_div" ontouchmove="closeFunc({{ $rows->portId }});" onmouseout="leaveFunc({{ $rows->portId }});" onmouseover="hoverFunc({{ $rows->portId }});">
+                                        <center>
+                                          {{ csrf_field() }}
+                                          <div class="work_hover" onclick="closeFunc({{ $rows->portId }});" id="work_hover{{ $rows->portId }}">
+                                            <h3>{{ $rows->webName }}</h3>
+                                            <br><br><br>
+                                            <div class="see_more_div" id="showDialog{{ $rows->portId }}" onclick="showDialog({{ $rows->portId }});">
+                                              SEE MORE
+                                            </div>
+                                          </div>
+                                            <img src="work/{{ $rows->coverPhoto }}" onclick="clickFunc({{ $rows->portId }});" id="work_img{{ $rows->portId }}" class="work_img">
+                                        </center>
+                                      </div>
+                                    </li>
+                              @endforeach
+
+
+                          </ul>
+                        </div>
+
+
+                   {{-- </div> --}}
+          <br><br><br><br><br>
+        </div>
+      </div>
     </div>
+    <br><br><br><br><br><br>
+
+
   </div>
 </section>
 

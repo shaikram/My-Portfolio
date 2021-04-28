@@ -137,12 +137,264 @@ body{
   padding: 0;
   margin: 0;
 }
-.portfolio-content{
-  
+.portfolio-div{
+  background: pink;
 }
-.col1{
-
+.work-head{
+  padding: 30px 0 30px 0;
+  background: #3ec6ba;
+  color:#fff;
+  font-family: arial;
+  border-bottom: 1px solid #168a7f;
 }
-.col2{
+.work-content{
+  background: #dbfffc;
+}
+.all_div{
+  margin: 0;
+  padding: 0;
+}
+/* ===========================WORK FORM=============== */
+.all_div{
+  display: block;
+  width:100%;
+  min-height: 250px;
+  height:auto;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  text-align: center;
 
+  animation: cont_trans;
+  animation-duration: 1s;
+  color:#216693;
+  font-family:"Roboto",sans-serif;
+}
+.work_img_div{
+  width:100%;
+  height:250px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  align-content: center;
+}
+.work_ul_div ul li{
+  list-style: none;
+  margin-top: 10px;
+  width:100%;
+}
+.work_ul_div ul{
+  margin: 0;
+  padding: 0;
+}
+.work_img{
+  height:100%;
+  max-height: 250px;
+  width:auto;
+  max-width: 360px;
+  margin: 0;
+  padding: 0;
+  object-fit: cover;
+}
+.work_hover{
+  width:360px;
+  height:250px;
+  margin: 0;
+  padding: 0;
+  background: #f6feff;
+  text-align: center;
+  float: left;
+  margin-top: -100%;
+}
+.wbg{
+  display:none;
+  width:100%;
+  height:100%;
+  position:fixed;
+  top:0px;
+  left:0px;
+  background: #2f2a2a;
+  opacity: 0.7;
+  z-index:15;
+}
+
+.dlgbox{
+  display:none;
+  position:fixed;
+  width:100%;
+  z-index: 20;
+  background: #fefefe;
+  height:100%;
+  font-family: arial;
+  top:0;
+  padding: 0;
+  margin-left: -4%;
+}
+.pic_frame{
+  width:100%;
+  height:auto;
+  min-height: 10%;
+  max-height: 40%;
+  top:0;
+  padding: 1px 0 1px 0;
+  border-bottom:2px solid #292d39;
+  overflow: hidden;
+}
+.descDiv{
+  width:100%;
+  height:60%;
+  background: #fefefe;
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+.ptd1{
+  height:auto;
+  width:100%;
+  margin: 0;
+  padding: 1px 0 1px 0;
+  min-height:5%;
+  border-bottom: 1px solid #afb8b7;
+  text-align: left;
+  line-height: 15px;
+}
+.ptd2{
+  height:auto;
+  width:94%;
+  margin: 0;
+  padding: 1px 3% 1px 3%;
+  min-height:5%;
+  text-align: left;
+  line-height: 18px;
+}
+.ptd3{
+  height:auto;
+  width:94%;
+  margin: 0;
+  padding: 1px 3% 1px 3%;
+  min-height:5%;
+}
+.ptd1 h1{
+  margin-left: 3%;
+  color:#1ca681;
+  font-size: 25px;
+}
+.ptd1 h3{
+  margin-left: 3%;
+  color: #d4d6d6;
+  font-size: 18px;
+}
+.ptd2 p{
+  color:#314155;
+  font-size: 15px;
+}
+.ptd3 a{
+  text-decoration: none;
+}
+.dsite{
+  padding: 10px 20px 10px 20px;
+  background: #2075ab;
+  font-weight: bold;
+  color:#fff;
+  float:left;
+}
+.cls2{
+  padding: 1px;
+  font-weight: bold;
+  color:#313833;
+  float:right;
+}
+.dsite:hover{
+  background: #fff;
+  color: #2075ab;
+  cursor:pointer;
+}
+.pt_images{
+  width:100%;
+  height:auto;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+.divBtn{
+  width:90%;
+  padding: 15px 5% 15px 5%;
+  margin: 0;
+  position: fixed;
+  margin-top: 30%;
+}
+.btnLeft, .btnRight{
+  background: #000;
+  opacity: 0.5;
+  margin: 0;
+  padding: 5px 10px 5px 10px;
+  color:#fff;
+  cursor: pointer;
+}
+.btnLeft{
+  float: left;
+}
+.btnRight{
+  float: right;
+}
+.work_hover h3{
+  margin-top: 35px;
+}
+.see_more_div{
+  width:60%;
+  height:45px;
+  margin: 0;
+  padding:0;
+  border: 3px solid #135d99;
+  font-family:"Roboto",sans-serif;
+  margin-left: 20%;
+  padding-top: 10px;
+  color:#272925;
+  cursor: pointer;
+}
+.see_more_div:hover{
+  background: #135d99;
+  color:#fff;
+}
+.dlgBoxAn{
+  animation: cont_trans;
+  animation-duration: 700ms;
+}
+
+.redirectDiv{
+  width:90%;
+  height:300px;
+  margin: 0;
+  padding: 0;
+}
+.redirectDiv h3{
+  color:#1faf7b;
+  font-family: arial;
+  float: left;
+}
+.redirectDiv input{
+  width:98%;
+  height:30px;
+  font-size: 18px;
+  color:#3e3e3e;
+  border: 1px solid #cdcdcd;
+  padding-left: 2%;
+}
+.redirectDiv button{
+  width:60%;
+  height:40px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #1faf7b;
+  color:#fefefe;
+  border: 1px solid #cdcdcd;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.redirectDiv span{
+  color:red;
+  font-family: arial;
+  display:none;
 }

@@ -75,35 +75,152 @@ $(document).ready(function(){
     // alert('all goods');
     // =======After passing Validation send the data to server========/
           $.ajax({
-            //target: '#targetLayer',
-                    beforeSubmit:function(){
-                      // $('.progress-bar').width('0%');
-                    },
-                    uploadProgress: function(event, position, total, percentageComplete){
-                        $('.progress-bar').animate({
-                         marginLeft: '100%'
-                        }, {
-                         duration: 5000
-                        });
-                        // $('.progress-bar').width(percentageComplete + '%');
-                    },
-                    success:function(data){
-                       //$('#loader-icon').hide();
-                       //$('#targetLayer').show();
-                       // $('.progress').hide();
-                       $('.progress-bar').animate({
-                        marginLeft: '0%'
-                       }, {
-                        duration: 1000
-                       });
-                       $('#portfolio_form').each(function(){
-                            this.reset();
-                        });
+                url:"/upload-portfolio",
+                headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+                type:"post",
+                async:false,
+                data:new FormData(this),
+                dataType: 'JSON',
+                contentType: false,
+                cache: false,
+                processData: false,
+                success: function(data){
+                   // console.log(Response);
+                  alert(data.message);
 
-                    },
-                    resetForm: true
+                      for(var i = 1; i <= 9; i++){
+                        var a = 'port'+i;
+                        var input = document.getElementById(a);
+                        input.value = "";
+                      }
+                }
            });
      //=================================================================================//
 
   });
 });
+
+
+// ===============================WORK DIV============================================
+
+  function dlgLogIn(){
+   var whitebg = document.getElementById('wbg');
+   var dlg = document.getElementById('dlgbox');
+
+   whitebg.style.display = "none";
+   dlg.style.display = "none";
+
+
+ }
+
+ function showDialog(x){
+   var id = x;
+   var whitebg = document.getElementById('wbg');
+   var dlg = document.getElementById('dlgbox');
+
+   whitebg.style.display = "block";
+   dlg.style.display = "block";
+   dlg.classList.add('dlgBoxAn');
+
+   $(document).ready(function(){
+
+     $.ajax({
+        url:"/ajax-request",
+        headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
+        type:"post",
+        async:false,
+        data:{
+          "port_id":id
+        },
+        success: function(Response){
+           $('#dlgbox').html(Response);
+        }
+      });
+
+
+   });
+
+ }
+
+ function hoverFunc(x){
+   var img_id = x;
+   if($(window).width() >= 1000){
+     var work_img = document.getElementById("work_img"+img_id);
+     var work_hover = document.getElementById("work_hover"+img_id);
+
+
+     work_hover.style.marginTop = "0%";
+     work_img.style.display = "none";
+
+
+   }
+ }
+ function leaveFunc(x){
+   var img_id = x;
+   if($(window).width() >= 1000){
+     var work_img = document.getElementById("work_img"+img_id);
+     var work_hover = document.getElementById("work_hover"+img_id);
+
+     work_hover.style.marginTop = "-100%";
+     work_img.style.display = "block";
+
+
+   }
+ }
+ function clickFunc(x){
+   var img_id = x;
+   if($(window).width() <= 768 || $(window).width() >= 768){
+     var work_img = document.getElementById("work_img"+img_id);
+     var work_hover = document.getElementById("work_hover"+img_id);
+
+     work_hover.style.marginTop = "0%";
+     work_img.style.display = "none";
+
+    }
+ }
+ function closeFunc(x){
+   var img_id = x;
+   if($(window).width() <= 768 || $(window).width() >= 768){
+     var work_img = document.getElementById("work_img"+img_id);
+     var work_hover = document.getElementById("work_hover"+img_id);
+
+     work_hover.style.marginTop = "-100%";
+     work_img.style.display = "block";
+  
+
+   }
+ }
+
+
+ $(document).ready(function(){
+   var all_div = document.getElementById('all_div');
+   var portfolio_div = document.getElementById('portfolio_div');
+   var functional_div = document.getElementById('functional_div');
+   var others_div = document.getElementById('others_div');
+
+   $('#wrk_all').click(function(){
+     all_div.style.display = "block";
+     portfolio_div.style.display = "none";
+     functional_div.style.display = "none";
+     others_div.style.display = "none";
+   });
+   $('#wrk_port').click(function(){
+     all_div.style.display = "none";
+     portfolio_div.style.display = "block";
+     functional_div.style.display = "none";
+     others_div.style.display = "none";
+   });
+   $('#wrk_func').click(function(){
+     all_div.style.display = "none";
+     portfolio_div.style.display = "none";
+     functional_div.style.display = "block";
+     others_div.style.display = "none";
+   });
+   $('#wrk_oth').click(function(){
+     all_div.style.display = "none";
+     portfolio_div.style.display = "none";
+     functional_div.style.display = "none";
+     others_div.style.display = "block";
+   });
+
+ });

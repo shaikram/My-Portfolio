@@ -18,7 +18,9 @@
   }
   </style>
   <body>
+  
     @yield('content')
     @yield('scripts')
+
   </body>
 </html>
