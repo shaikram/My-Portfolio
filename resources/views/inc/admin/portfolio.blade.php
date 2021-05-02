@@ -29,19 +29,23 @@
                 <input type="text" name="input2" class="form-control bg-dark text-light" id="port2" placeholder="nameofwebsite000.com">
             </div>
             <div class="mb-3">
+                <label for="exampleFormControlInput1" class="form-label text-white">Github Repository</label>
+                <input type="text" name="input3" class="form-control bg-dark text-light" id="port3" placeholder="https://github.com/fzaninotto/Faker#fakerprovideren_uscompany">
+            </div>
+            <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-white">Kind of system</label>
-                <input type="text" name="input3" class="form-control bg-dark text-light" id="port3" placeholder="Ex: Webshop Ecommerce, Online Registraion...">
+                <input type="text" name="input4" class="form-control bg-dark text-light" id="port4" placeholder="Ex: Webshop Ecommerce, Online Registraion...">
             </div>
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label text-white">Select Section</label>
-                <select name="input4" class="form-select form-select-lg bg-dark text-light mb-3" aria-label=".form-select-lg example">
+                <select name="input5" class="form-select form-select-lg bg-dark text-light mb-3" aria-label=".form-select-lg example">
                     <option value="1">PORTFOLIO</option>
                     <option value="2">FUNCTIONAL</option>
                 </select>
             </div>
             <div class="mb-3">
               <label for="exampleFormControlTextarea1" class="form-label text-white">Description</label>
-              <textarea name="input5" class="form-control bg-dark text-light" id="port4" placeholder="Text..." rows="3"></textarea>
+              <textarea name="input6" class="form-control bg-dark text-light" id="port5" placeholder="Text..." rows="3"></textarea>
             </div>
 
         <br>
@@ -50,23 +54,23 @@
 
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Cover Photo</label>
-          <input type="file" name="cover" class="form-control bg-dark text-light" id="port5" />
+          <input type="file" name="cover" class="form-control bg-dark text-light" id="port6" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 1</label>
-          <input type="file" name="file1" class="form-control bg-dark text-light" id="port6" />
+          <input type="file" name="file1" class="form-control bg-dark text-light" id="port7" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 2</label>
-          <input type="file" name="file2" class="form-control bg-dark text-light" id="port7" />
+          <input type="file" name="file2" class="form-control bg-dark text-light" id="port8" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 3</label>
-          <input type="file" name="file3" class="form-control bg-dark text-light" id="port8" />
+          <input type="file" name="file3" class="form-control bg-dark text-light" id="port9" />
         </div>
         <div class="mb-3">
           <label class="form-label text-white" for="customFile">Picture 4</label>
-          <input type="file" name="file4" class="form-control bg-dark text-light" id="port9" />
+          <input type="file" name="file4" class="form-control bg-dark text-light" id="port10" />
         </div><br><br>
 
       </div>
@@ -79,6 +83,7 @@
       </div>
       </form>
     </div><br><br><br>
+    {{-- ===============================PORTFOLIO DISPLAY=========================== --}}
     <div class="portfolio-div">
       <div class="row">
         <div class="work-head col-sm-12 col-md-12 col-lg-12 align-items-center text-center">

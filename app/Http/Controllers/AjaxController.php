@@ -53,6 +53,11 @@ class AjaxController extends Controller
               <i class="fa fa-location-arrow"></i> &nbsp;&nbsp;VIEW SITE
             </div>
           </a>
+          <a href="<?php echo $res->github;?>">
+            <div class="bsite">
+              <i class="fa fa-location-arrow"></i> &nbsp;&nbsp;VIEW ON GITHUB
+            </div>
+          </a>
           <div class="cls2" onclick="dlgLogIn()">
             <i class="fa fa-times fa-3x"></i>
           </div>

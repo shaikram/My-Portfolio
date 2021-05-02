@@ -179,12 +179,13 @@
   .skill_sec{
     background-size: 100% auto;
     background-attachment: fixed;
+    height:1224px;
   }
   .pre_title{width:20%;}
   .preload_bar{width:80%;}
   .pre_title span{font-size: 15px;}
   .div_preload{
-    margin-top: 5%;
+    margin-top: 4.7%;
   }
   .icon_table{
     float:right;
@@ -204,6 +205,7 @@
     height:100%;
     width:80%;
     display: block;
+
   }
   .skl_left{
     float:left;

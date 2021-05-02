@@ -28,9 +28,10 @@ class portfolioController extends Controller
       $portfolio = new Portfolio();
       $portfolio->webName = $request->input("input1");
       $portfolio->webURL = $request->input("input2");
-      $portfolio->systemKind = $request->input("input3");
-      $portfolio->projectType = $request->input("input4");
-      $portfolio->description = $request->input("input5");
+      $portfolio->github = $request->input("input3");
+      $portfolio->systemKind = $request->input("input4");
+      $portfolio->projectType = $request->input("input5");
+      $portfolio->description = $request->input("input6");
       $photo = $request->file("cover");
       $new_name = rand().'.'. $photo->getClientOriginalExtension();
       $photo->move(public_path('work'), $new_name);

@@ -300,17 +300,31 @@ body{
   color:#fff;
   float:left;
 }
+.dsite:hover{
+  background: #fff;
+  color: #2075ab;
+  cursor:pointer;
+}
+.bsite{
+  padding: 10px 20px 10px 20px;
+  background: #723c82;
+  font-weight: bold;
+  color:#fff;
+  float:left;
+  margin-left: 5px;
+}
+.bsite:hover{
+  background: #fff;
+  color: #723c82;
+  cursor:pointer;
+}
 .cls2{
   padding: 1px;
   font-weight: bold;
   color:#313833;
   float:right;
 }
-.dsite:hover{
-  background: #fff;
-  color: #2075ab;
-  cursor:pointer;
-}
+
 .pt_images{
   width:100%;
   height:auto;

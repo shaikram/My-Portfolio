@@ -30,6 +30,7 @@ var load_bar7 = document.getElementById('load_bar7');
 var load_bar8 = document.getElementById('load_bar8');
 var load_bar9 = document.getElementById('load_bar9');
 var load_bar10 = document.getElementById('load_bar10');
+var load_bar11 = document.getElementById('load_bar11');
 
 function loop(){
   elementsToShow.forEach(function(element){
@@ -45,6 +46,7 @@ function loop(){
       load_bar8.classList.add("visible8");
       load_bar9.classList.add("visible9");
       load_bar10.classList.add("visible5");
+      load_bar11.classList.add("visible8");
 
       load_bar.classList.remove("invisible");
       load_bar2.classList.remove("invisible2");
@@ -56,6 +58,7 @@ function loop(){
       load_bar8.classList.remove("invisible8");
       load_bar9.classList.remove("invisible9");
       load_bar10.classList.remove("invisible3");
+      load_bar11.classList.remove("invisible8");
 
 
 
@@ -70,6 +73,7 @@ function loop(){
       load_bar8.classList.add("invisible8");
       load_bar9.classList.add("invisible9");
       load_bar10.classList.add("invisible3");
+      load_bar11.classList.add("invisible8");
 
       load_bar.classList.remove("visible");
       load_bar2.classList.remove("visible2");
@@ -81,6 +85,7 @@ function loop(){
       load_bar8.classList.remove("visible8");
       load_bar9.classList.remove("visible9");
       load_bar10.classList.remove("visible5");
+      load_bar11.classList.remove("visible8");
     }
   });
    scroll(loop);

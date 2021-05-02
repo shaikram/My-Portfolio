@@ -3,7 +3,7 @@ $(document).ready(function(){
     e.preventDefault();
     // var input = $('#port');
 
-    for(var input = 1; input <= 9; input++){
+    for(var input = 1; input <= 10; input++){
       var port = 'port'+input;
       var focus = document.getElementById(port);
       var field = document.getElementById(port).value;
@@ -12,6 +12,7 @@ $(document).ready(function(){
                   "",
                   "Website Name",
                   "Website Url",
+                  "Github Repository",
                   "Kind of system",
                   "Description",
                   "Cover Photo",
@@ -38,7 +39,7 @@ $(document).ready(function(){
           return false;
           break;
        }
-       if(input >= 5){
+       if(input >= 6){
          var pos = field.indexOf('.') + 1;
          var res = field.substr(pos, 3);
 
@@ -88,7 +89,7 @@ $(document).ready(function(){
                    // console.log(Response);
                   alert(data.message);
 
-                      for(var i = 1; i <= 9; i++){
+                      for(var i = 1; i <= 10; i++){
                         var a = 'port'+i;
                         var input = document.getElementById(a);
                         input.value = "";
@@ -186,7 +187,7 @@ $(document).ready(function(){
 
      work_hover.style.marginTop = "-100%";
      work_img.style.display = "block";
-  
+
 
    }
  }

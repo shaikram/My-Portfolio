@@ -50,6 +50,9 @@
             <td><img src="web_image/logo8.png" width="30%" height="auto"/></td>
           </tr>
           <tr>
+            <td><img src="web_image/git.png" width="30%" height="auto"/></td>
+          </tr>
+          <tr>
             <td><img src="web_image/logo9.png" width="30%" height="auto"/></td>
           </tr>
 
@@ -131,6 +134,14 @@
         </div>
         <div class="div_preload">
           <div class="pre_title">
+            <span>Git</span>
+          </div>
+          <div class="preload_bar">
+            <div class="load_bar5 show-on-scroll" id="load_bar11">60%</div>
+          </div>
+        </div>
+        <div class="div_preload">
+          <div class="pre_title">
             <span>Photoshop</span>
           </div>
           <div class="preload_bar">
@@ -138,8 +149,6 @@
           </div>
         </div>
       </div>
-
-
 
     </div>
   </div>
